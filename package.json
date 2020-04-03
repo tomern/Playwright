@@ -4,17 +4,19 @@
   "description": "",
   "main": "program.js",
   "directories": {
-    "test": "todo.spec.js"
+    "test": "james-allen-tests.js"
   },
   "scripts": {
-    "test": "mocha --timeout 15000"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^7.1.1",
-    "mocha.parallel": "^0.15.6",
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "jest": "^25.2.7",
+    "jest-playwright-preset": "^0.1.1",
     "playwright": "^0.9.24"
   }
 }
