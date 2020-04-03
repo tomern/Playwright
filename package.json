@@ -4,7 +4,7 @@
   "description": "",
   "main": "program.js",
   "directories": {
-    "test": "test"
+    "test": "todo.spec.js"
   },
   "scripts": {
     "test": "mocha --timeout 15000"
@@ -14,6 +14,7 @@
   "dependencies": {
     "chai": "^4.2.0",
     "mocha": "^7.1.1",
+    "mocha.parallel": "^0.15.6",
     "playwright": "^0.9.24"
   }
 }

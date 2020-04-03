@@ -1,16 +1,16 @@
 const playwright = require('playwright')
 const chai = require('chai')
 const expect = chai.expect
-const BASE_URL = 'http://todomvc.com/examples/react/#/'
+const BASE_URL = 'https://www.jamesallen.com'
+const HomePage = require('../PageObjects/HomePage');
 
-// playwright variables
 let page, browser, context
 
-describe('TO DO APP TESTS - PLAYWRIGHT', () => {
+describe('Playwright Tests', () => {
 
     beforeEach(async () => {
         browser = await playwright['chromium'].launch({ headless: false })
-        context = await browser.newContext()
+        context = await browser.newContext({ignoreHTTPSErrors: true});
         page = await context.newPage(BASE_URL)
     })
 
@@ -19,23 +19,17 @@ describe('TO DO APP TESTS - PLAYWRIGHT', () => {
         await browser.close()
     })
 
-    it('List is loaded empty', async() => {
-        const sel = 'ul.todo-list li'
-        const list = await page.$$(sel)
-        expect(list.length).to.equal(0)
+    it('James Allen 1', async() => {
+        var homePage =  new HomePage(page);
+        var loginPage = await homePage.clickLogin();
+        var memberPage = await loginPage.login('tomernoy1@gmail.com', '123456');
+        await memberPage.verifyLogin();
     })
 
-    it('Adds a new todo in empty list', async() => {
-        await page.waitForSelector('input')
-        const element = await page.$('input')
-        await element.type('Practice microsoft playwright')
-        await element.press('Enter')
-
-        // check list of ToDo
-        const sel = 'ul.todo-list li'
-        await page.waitForSelector(sel)
-        const list = await page.$$(sel)
-        expect(list.length).to.equal(1)
-        expect(await page.$eval(sel, node => node.innerText)).to.be.equal('Practice microsoft playwright')
+    it('James Allen 2', async() => {
+        var homePage =  new HomePage(page);
+        var loginPage = await homePage.clickLogin();
+        var memberPage = await loginPage.login('tomernoy1@gmail.com', '123456');
+        await memberPage.verifyLogin();
     })
 })
