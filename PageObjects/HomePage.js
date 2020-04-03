@@ -8,6 +8,7 @@ class HomePage extends BasePage{
     }
 
     async clickLogin() {
+      console.log("Click login.");
       await this.checkElement(LoginBtn, 15);
       await this.page.click(LoginBtn);
       return new LoginPage(this.page);

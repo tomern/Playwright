@@ -7,7 +7,7 @@
     "test": "james-allen-tests.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch"
   },
   "author": "",
   "license": "ISC",
