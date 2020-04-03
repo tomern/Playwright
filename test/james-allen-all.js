@@ -18,7 +18,7 @@ describe('Playwright Tests', () => {
     })
 
     afterEach(async function() {
-        //await page.screenshot({ path: `${this.currentTest.title.replace(/\s+/g, '_')}.png` })
+        await page.screenshot({ path: `${this.currentTest.title.replace(/\s+/g, '_')}.png` })
         await browser.close()
     })
 
