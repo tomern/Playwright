@@ -5,11 +5,9 @@ const BASE_URL = 'https://www.jamesallen.com'
 const HomePage = require('../PageObjects/HomePage');
 const playwright = require('playwright')
 
-let page, browser, context
+var page, browser, context
 
 describe('Playwright Tests', () => {
-
-    jest.setTimeout(30000);
 
     beforeEach(async () => {
         browser = await playwright['chromium'].launch({ headless: false })
@@ -18,7 +16,7 @@ describe('Playwright Tests', () => {
     })
 
     afterEach(async function() {
-        await page.screenshot({ path: `${this.currentTest.title.replace(/\s+/g, '_')}.png` })
+        //await page.screenshot({ path: `${this.currentTest.title.replace(/\s+/g, '_')}.png` })
         await browser.close()
     })
 

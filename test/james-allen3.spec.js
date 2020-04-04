@@ -4,10 +4,8 @@ const playwright = require('playwright')
 
 describe('Playwright Tests', () => {
 
-    jest.setTimeout(50000);
-
     it('James Allen 3', async() => {
-        var browser = await playwright['chromium'].launch({ headless: true })
+        var browser = await playwright['chromium'].launch({ headless: false })
         var context = await browser.newContext({ignoreHTTPSErrors: true});
         var page = await context.newPage(BASE_URL)
         var homePage =  new HomePage(page);

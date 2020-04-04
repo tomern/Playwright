@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="30.0070" tests="3" failures="0">
+  <testsuite name="Playwright Tests" timestamp="2020-04-04T00:00:15" tests="1" file="C:\Users\tnoy\Desktop\playwright\test\james-allen1.spec.js" time="9.7860" failures="0">
+    <testcase name=" Playwright Tests James Allen 1" time="9.7860" classname="James Allen 1">
+    </testcase>
+  </testsuite>
+  <testsuite name="Playwright Tests" timestamp="2020-04-04T00:00:15" tests="1" file="C:\Users\tnoy\Desktop\playwright\test\james-allen3.spec.js" time="10.0540" failures="0">
+    <testcase name=" Playwright Tests James Allen 3" time="10.0540" classname="James Allen 3">
+    </testcase>
+  </testsuite>
+  <testsuite name="Playwright Tests" timestamp="2020-04-04T00:00:15" tests="1" file="C:\Users\tnoy\Desktop\playwright\test\james-allen2.spec.js" time="10.1670" failures="0">
+    <testcase name=" Playwright Tests James Allen 2" time="10.1670" classname="James Allen 2">
+    </testcase>
+  </testsuite>
+</testsuites>
